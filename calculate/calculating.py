@@ -1,5 +1,5 @@
 import logging
-from expresssion_check import ExpressionCheck
+from calculate.expresssion_check import ExpressionCheck
 logger = logging.getLogger(__name__)
 
 
