@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+      <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='icons/calculator.ico') }}">
+        <meta charset="UTF-8">
+        <meta name="author" content="SpecialSpicy">
+        <meta name="keywords" content="Calculate, Calculator">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Python Calculator Website, made by SpecialSpicy">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+        <md-card ng-repeat="it in products.catalog" flex="22" flex-sm="46" flex-xs="80" ng-class="{shaded:$mdMedia('xs') }"></md-card>
+        
+    <title>Python Calculator</title>
+  </head>
+<body>
+    
+
+            <form method="POST">
+                <div class="calculator">
+                    <h2 class="title">Python Calculator</h2>
+                    <div class="screen">
+                        <input class="calculator-screen" type="text" name="expression" onkeydown="return false;"
+                        id="expression" placeholder="0" value="{{ expression }}" >
+                        <p class="screen-result">{{ result }}</p>
+                    </div>
+                        <div class="calculator-keys">
+
+
+                            <button type="divide" class="num1" name="button" value="/">÷</button>
+                            <button type="multiply" class="num1" name="button" value="*">x</button>
+                            <button type="divide" class="num1" name="button" value="-">-</button>
+                            <button type="add" class="num1" name="button" value="+">+</button>
+                            <button type="(" class="num1" name="button" value="(">(</button>
+                            <button type=")" class="num1" name="button" value=")">)</button>
+                            <button type="exponentiation" class="num1" name="button" value="^">^</button>
+                            <button type="sqrt" class="num1" name="button" value="√">√</button>
+
+
+
+                            <button type="seven" class="num1" name="button" value="7">7</button>
+                            <button type="eight" class="num1" name="button" value="8">8</button>
+                            <button type="nine" class="num1" name="button" value="9">9</button>
+
+                            <button type="four" class="num1" name="button" value="4">4</button>
+                            <button type="five" class="num1" name="button" value="5">5</button>
+                            <button type="six" class="num1" name="button" value="6">6</button>
+
+                            <button type="one" class="num1" name="button" value="1">1</button>
+                            <button type="two" class="num1" name="button" value="2">2</button>
+                            <button type="three" class="num1" name="button" value="3">3</button>
+
+                            <button type="zero" class="num1" name="button" value="0">0</button>
+                            <button type="point" class="num1" name="button" value=".">.</button>
+
+                            <button type="all-clear" class="num2" name="button" value="C">C</button>
+                            <button type="equal-sign" class="num2" name="button" value="=">=</button>
+
+                            
+
+                
+                        </div>
+                        <a class="creator" href="https://github.com/SpecialSpicy"><h5>Created by Houman Hafez</h5></a>
+                </div>
+            </form>
+        </body>
+    </html>

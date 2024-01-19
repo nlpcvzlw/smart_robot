@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>问答界面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .question-box, .answer-box {
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .question-box {
+            background-color: #e7eff6;
+        }
+        .answer-box {
+            background-color: #f9f9f9;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>问答界面</h1>
+        <form method="POST">
+            <input type="text" name="question" placeholder="请输入您的问题" required>
+            <button type="submit" class="button">提交问题</button>
+        </form>
+        <div class="answer-box">
+            {% if question %}
+            <strong>问题:</strong> {{ question }}<br>
+            <strong>回答:</strong> {{ answer }}
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
