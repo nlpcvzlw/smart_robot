@@ -1,6 +1,4 @@
-from torch.nn import Conv3d
 
-AN =0
 class ExpressionCheck:
     def __init__(self):
         self.error_message = ""

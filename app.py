@@ -3,7 +3,7 @@ from flask import Flask, request, render_template
 from calculate.calculating import Calculator
 from match_keyword.dataset import Matcher
 
-logging.config.fileConfig('logging.conf')
+# logging.config.fileConfig('logging.conf')
 
 app = Flask(__name__)
 app.static_folder = 'static'
